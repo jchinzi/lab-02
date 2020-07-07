@@ -20,9 +20,9 @@ Actual Time Needed to Complete: 30 minutes // Jen was on the dot. #kudos
 
 Number and Name of Feature: #2 Filter Images
 
-Estimate of Time Needed to Complete: 
+Estimate of Time Needed to Complete: 60 minutes
 
-Start Time: 
+Start Time: 4:00
 
 Finish Time: 
 

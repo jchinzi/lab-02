@@ -21,13 +21,21 @@ HornedCreature.prototype.creatureCreator = function(){
   $newSection.find('img').attr('alt', this.keyword);
   $newSection.find('p').text(this.description);
   $('main').append($newSection);
+
+  const dropdownTemplate = $('select').html();
+  console.log('dropdown:',dropdownTemplate);
+  // const $newFilter = $(`<select>${dropdownTemplate}</select>`); //come back later
+  dropdownTemplate.find('select').attr('value', this.keyword);
+  // $('select').append($newFilter);
 };
 
-/* <section id="photo-template">
-<h2>TITLE</h2>
-<img src="IMAGE" alt="KEYWORD">
-<p>DESCRIPTION</p>
-</section> */
+/* <select>
+<option value="default">Filter by Keyword</option>
+</select> */
+
+// Create a <select> element which contains unique <option> elements extracted dynamically from the JSON file, one for each keyword.
+// Use an event handler to respond when the user chooses an option from the select menu. Hide all of the images, then show those whose keyword matches the option chosen.
+
 
 
 // {
