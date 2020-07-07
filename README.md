@@ -8,13 +8,13 @@ Collaboration between Jen Chinzi and Paul O'Brien
 
 Number and Name of Feature: #1 Display Images
 
-Estimate of Time Needed to Complete: 
+Estimate of Time Needed to Complete: 25 minutes
 
-Start Time: 
+Start Time: 3:18
 
-Finish Time: 
+Finish Time: 3:48
 
-Actual Time Needed to Complete:
+Actual Time Needed to Complete: 30 minutes // Jen was on the dot. #kudos
 
 -----
 
