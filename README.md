@@ -1,7 +1,8 @@
 # lab-02
+
 Lab 02: jQuery Selectors and Events
 
-Collaboration between Jen Chinzi and Paul O'Brian
+Collaboration between Jen Chinzi and Paul O'Brien
 
 -----
 
