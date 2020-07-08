@@ -28,14 +28,22 @@ HornedCreature.prototype.creatureCreator = function(){
 };
 
 HornedCreature.prototype.dropdownFill = function(){
-  const dropdown = $('select');
   if (listItems.includes(this.keyword) === false) {
     const $newFilter = $(`<option>${this.keyword}</option>`);
     $('select').append($newFilter);
     listItems.push(this.keyword);
-    console.log(listItems);
+    // console.log(listItems);
   }
 };
+
+$('select').on('change ', hornSelect);
+
+function hornSelect() {
+  let selectedHorn = $(this).val();
+  console.log('this is the selection ' + selectedHorn);
+  $('section').hide();
+  $(`img[alt=${selectedHorn}]`).parent().show(); // thanks to Matt Herriges for the assist.
+}
 
 /* <select>
 <option value="default">Filter by Keyword</option>
