@@ -48,17 +48,17 @@ Estimate of time needed to complete: _90 Paul / 45 Jen_
 
 Start time: _2:15_
 
-Finish time: _____
+Finish time: _2:46____
 
-Actual time needed to complete: _____
+Actual time needed to complete: _31____
 
 -----
 
 Number and name of feature: __Feature 2: Templating
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _30 Jen / 50 Paul____
 
-Start time: _____
+Start time: _2:50 PM____
 
 Finish time: _____
 
