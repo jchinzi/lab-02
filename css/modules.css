@@ -1,5 +1,5 @@
 section {
-  float: left;
+  /* float: left; */
   overflow: auto;
   padding: 20px;
 }
@@ -13,3 +13,8 @@ section img, section p{
 h2 {
   font-family: 'Cabin Sketch', cursive;
 }
+
+main {
+  display: flex;
+}
+

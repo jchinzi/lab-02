@@ -5,6 +5,10 @@ $.ajax('data/page-1.json', {method: "GET", dataType: "JSON"})
     hornData.forEach(objectInDataArray => {
       new HornedCreature(objectInDataArray).creatureCreator();
     });
+  }).then(() => {hornArrayPageOne.forEach(horn => {
+    console.log('hello' + horn);
+    $('main').append(horn.creatureCreator());
+  });
   });
 
 const listItems = [];
@@ -30,7 +34,7 @@ function HornedCreature(obj) {
 //   $('main').append($newSection);
 // };
 
-// console.log(hornArrayPageOne);
+console.log(hornArrayPageOne);
 
 HornedCreature.prototype.creatureCreator = function(){
   let template = $('#hornTemplate').html();
@@ -38,9 +42,10 @@ HornedCreature.prototype.creatureCreator = function(){
   return html;
 };
 
-hornArrayPageOne.forEach(horn => {
-  $('main').append(horn.creatureCreator());
-});
+// hornArrayPageOne.forEach(horn => {
+//   console.log('hello' + horn);
+//   $('main').append(horn.creatureCreator());
+// });
 
 // ==============
 // Create the appropriate Mustache template in your HTML with the same <h2>, <img>, and <p> elements as the jQuery template from the prior lab.

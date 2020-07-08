@@ -60,17 +60,21 @@ Estimate of time needed to complete: _30 Jen / 50 Paul____
 
 Start time: _2:50 PM____
 
-Finish time: _____
 
-Actual time needed to complete: _____
+Finish time: _3:40____
+
+Actual time needed to complete: _50____ Paul gets a star
 
 -----
 
 Number and name of feature: __Feature 3: Styling with Flexbox
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _45____
 
-Start time: _____
+Start time: _3:37____
+
+PAUSE: 3:41
+UnPAUSE:
 
 Finish time: _____
 
