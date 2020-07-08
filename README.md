@@ -39,3 +39,51 @@ Start Time: 6:56
 Finish Time: 7:15
 
 Actual Time Needed to Complete: :19
+
+-----
+
+Number and name of feature: _Feature 1: Pagination
+
+Estimate of time needed to complete: _90 Paul / 45 Jen_
+
+Start time: _2:15_
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+-----
+
+Number and name of feature: __Feature 2: Templating
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+-----
+
+Number and name of feature: __Feature 3: Styling with Flexbox
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+-----
+
+Number and name of feature: __Feature 4: Sort the images
+
+Estimate of time needed to complete: _____
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
