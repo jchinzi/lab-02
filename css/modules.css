@@ -1,0 +1,15 @@
+section {
+  float: left;
+  overflow: auto;
+  padding: 20px;
+}
+
+section img, section p{
+  max-width: 25vw;
+  max-height: 25vh;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+h2 {
+  font-family: 'Cabin Sketch', cursive;
+}
