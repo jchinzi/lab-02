@@ -5,12 +5,16 @@ $.ajax('data/page-1.json', {method: "GET", dataType: "JSON"})
     });
   });
 
+const listItems = [];
+
+
 function HornedCreature(obj) {
   this.image = obj.image_url;
   this.title = obj.title;
   this.description = obj.description;
   this.keyword = obj.keyword;
   this.horns = obj.horns; // TODO: Horns, what?
+  this.dropdownFill();
 }
 
 HornedCreature.prototype.creatureCreator = function(){
@@ -21,12 +25,16 @@ HornedCreature.prototype.creatureCreator = function(){
   $newSection.find('img').attr('alt', this.keyword);
   $newSection.find('p').text(this.description);
   $('main').append($newSection);
+};
 
-  const dropdownTemplate = $('select').html();
-  console.log('dropdown:',dropdownTemplate);
-  // const $newFilter = $(`<select>${dropdownTemplate}</select>`); //come back later
-  dropdownTemplate.find('select').attr('value', this.keyword);
-  // $('select').append($newFilter);
+HornedCreature.prototype.dropdownFill = function(){
+  const dropdown = $('select');
+  if (listItems.includes(this.keyword) === false) {
+    const $newFilter = $(`<option>${this.keyword}</option>`);
+    $('select').append($newFilter);
+    listItems.push(this.keyword);
+    console.log(listItems);
+  }
 };
 
 /* <select>
