@@ -74,19 +74,19 @@ Estimate of time needed to complete: _45____
 Start time: _3:37____
 
 PAUSE: 3:41
-UnPAUSE:
+UnPAUSE: 4:25
 
-Finish time: _____
+Finish time:  4:48_____
 
-Actual time needed to complete: _____
+Actual time needed to complete: _32____
 
 -----
 
 Number and name of feature: __Feature 4: Sort the images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: _60____
 
-Start time: _____
+Start time: _5:00____
 
 Finish time: _____
 
