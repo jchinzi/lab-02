@@ -24,18 +24,18 @@ Estimate of Time Needed to Complete: 60 minutes
 
 Start Time: 4:00
 
-Finish Time: 
+Finish Time: 6:52
 
-Actual Time Needed to Complete:
+Actual Time Needed to Complete: 2:52
 
 -----
 
 Number and Name of Feature: #3 Style the Application
 
-Estimate of Time Needed to Complete: 
+Estimate of Time Needed to Complete: :45
 
-Start Time: 
+Start Time: 6:56
 
-Finish Time: 
+Finish Time: 7:15
 
-Actual Time Needed to Complete:
+Actual Time Needed to Complete: :19
