@@ -88,6 +88,9 @@ Estimate of time needed to complete: _60____
 
 Start time: _5:00____
 
+6:05
+Start 1:45
+
 Finish time: _____
 
 Actual time needed to complete: _____

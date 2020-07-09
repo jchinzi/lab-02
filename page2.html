@@ -12,7 +12,7 @@
       crossorigin="anonymous"></script>
 
       <script id="hornTemplate" type="text/x-tmpl-mustache">
-        <section>
+        <section class = "{{keyword}}">
           <h2>{{title}}</h2>
           <img src="{{image}}" alt="{{keywords}}"></img>
           <p>{{description}}</p>
@@ -31,13 +31,15 @@
       <select>
         <option value="default">Select Your Horn</option>
       </select>
+      <form>
+        <label for = "sortOptions">Sort Options: </label>
+        <input type="radio" id = "name" name = "sortOptions" value="Name">
+        <label for = "sortOptions">Name</label>
+        <input type="radio" id = "horns" name = "sortOptions" value="Horns">
+        <label for = "sortOptions">Horns</label>
+      </form>
     </header>
     <main>
-      <section id="photo-template">
-        <h2></h2>
-        <img src="" alt="">
-        <p></p>
-      </section>
     </main>
     <footer>
       &copy; 2018 Code Fellows

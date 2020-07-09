@@ -8,6 +8,8 @@ $.ajax('data/page-2.json', {method: "GET", dataType: "JSON"}) // swapped in data
   }).then(() => {hornArrayPageTwo.forEach(horn => {
     $('main').append(horn.creatureCreator());
   });
+  }).then(() => {$('#name').attr("checked", "checked");
+    animalSort();
   });
 
 const listItemPageTwo = [];
@@ -23,17 +25,6 @@ function HornedCreature(obj) { // TODO: Wire this back to app.js via script on h
   this.dropdownFill();
 }
 
-// HornedCreature.prototype.creatureCreator = function(){
-//   const creatureTemplate = $('#photo-template').html();
-//   const $newSection = $(`<section>${creatureTemplate}</section>`);
-//   $newSection.find('h2').text(this.title);
-//   $newSection.find('img').attr('src', this.image);
-//   $newSection.find('img').attr('alt', this.keyword);
-//   $newSection.find('p').text(this.description);
-//   $('main').append($newSection);
-// };
-
-
 HornedCreature.prototype.creatureCreator = function(){
   let template = $('#hornTemplate').html();
   let html = Mustache.render(template, this);
@@ -45,7 +36,6 @@ HornedCreature.prototype.dropdownFill = function(){
     const $newFilter = $(`<option>${this.keyword}</option>`);
     $('select').append($newFilter);
     listItemPageTwo.push(this.keyword);
-    // console.log(listItemPageTwo);
   }
 };
 
@@ -55,5 +45,36 @@ function hornSelect() {
   let selectedHorn = $(this).val();
   console.log('this is the selection ' + selectedHorn);
   $('section').hide();
-  $(`img[alt=${selectedHorn}]`).parent().show(); // thanks to Matt Herriges for the assist.
+  $(`.${selectedHorn}`).show(); // thanks to Matt Herriges for the assist.
+}
+
+$('form').on('change', animalSort);
+function animalSort() {
+  let selectedSort = $("input[name='sortOptions']:checked").val();
+  console.log('here is array before' + hornArrayPageTwo);
+  if (selectedSort === 'Name') {
+    hornArrayPageTwo.sort((a, b) => {
+      console.log(a);
+      if (a.title.toLowerCase() < b.title.toLowerCase()) {
+        return -1;
+      }
+      else if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        return 1;
+      }
+    });
+  }
+  else if (selectedSort === 'Horns') {
+    hornArrayPageTwo.sort((a, b) => {
+      if (a.horns > b.horns) {
+        return 1;
+      }
+      else if (a.horns < b.horns) {
+        return -1;
+      }
+    });
+  }
+  $('main').empty();
+  return hornArrayPageTwo.forEach((data) => {
+    $('main').append(data.creatureCreator());
+  });
 }
