@@ -6,7 +6,7 @@ $.ajax('data/page-1.json', {method: "GET", dataType: "JSON"})
       new HornedCreature(objectInDataArray).creatureCreator();
     });
   }).then(() => {hornArrayPageOne.forEach(horn => {
-    console.log('hello' + horn);
+    // console.log('hello' + horn);
     $('main').append(horn.creatureCreator());
   });
   });
@@ -34,7 +34,7 @@ function HornedCreature(obj) {
 //   $('main').append($newSection);
 // };
 
-console.log(hornArrayPageOne);
+// console.log(hornArrayPageOne);
 
 HornedCreature.prototype.creatureCreator = function(){
   let template = $('#hornTemplate').html();
@@ -62,12 +62,38 @@ HornedCreature.prototype.dropdownFill = function(){
   }
 };
 
-$('select').on('change ', hornSelect);
+$('select').on('change', hornSelect);
 
 function hornSelect() {
   let selectedHorn = $(this).val();
   console.log('this is the selection ' + selectedHorn);
   $('section').hide();
-  $(`img[alt=${selectedHorn}]`).parent().show(); // thanks to Matt Herriges for the assist.
+  // console.log($(`img[alt=${selectedHorn}]`).parent());
+  $(`.${selectedHorn}`).show(); // thanks to Matt Herriges for the assist.
 }
 
+// Add the ability for the user to sort the images by either title or by number of horns.
+// Sort the images by one of the properties on page load. This should also apply to the second page of images.
+
+$('form').on('change', animalSort);
+
+function animalSort() {
+  let selectedSort = $("input[name='sortOptions']:checked").val();
+  console.log('here is array before' + hornArrayPageOne);
+  if (selectedSort === 'Name') {
+    hornArrayPageOne.sort((a, b) => {
+      console.log(a);
+      if (a.title.toLowerCase() < b.title.toLowerCase()) {
+        return -1;
+      }
+      else if (a.title.toLowerCase() > b.title.toLowerCase()) {
+        return 1;
+      }
+    });
+    return hornArrayPageOne.forEach((data) => {
+      $('main').append(data.creatureCreator());
+    });
+  }
+  // hornArrayPageOne.creatureCreator();
+  console.log('here is array after' + hornArrayPageOne);
+}
