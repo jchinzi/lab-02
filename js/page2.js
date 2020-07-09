@@ -8,6 +8,8 @@ $.ajax('data/page-2.json', {method: "GET", dataType: "JSON"}) // swapped in data
   }).then(() => {hornArrayPageTwo.forEach(horn => {
     $('main').append(horn.creatureCreator());
   });
+  }).then(() => {$('#name').attr("checked", "checked");
+    animalSort();
   });
 
 const listItemPageTwo = [];
@@ -76,5 +78,3 @@ function animalSort() {
     $('main').append(data.creatureCreator());
   });
 }
-
-$('#name').attr("checked", "checked");

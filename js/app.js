@@ -8,6 +8,8 @@ $.ajax('data/page-1.json', {method: "GET", dataType: "JSON"})
   }).then(() => {hornArrayPageOne.forEach(horn => {
     $('main').append(horn.creatureCreator());
   });
+  }).then(() => {$('#name').attr("checked", "checked");
+    animalSort();
   });
 
 const listItems = [];
